@@ -15,6 +15,7 @@ In a seperate window, run the following:
 ```
 pipenv shell
 pipenv install
+cd pfp-generator/
 flask run
 ```
 The service will be serving on 
