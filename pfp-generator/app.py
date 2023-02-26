@@ -363,16 +363,16 @@ class NFTService:
 from pyteal import *
 from beaker import *
 
-def demo():
-    service = NFTService(
-        nft_creator_address = sandbox.get_accounts().pop().address,
-        nft_creator_pk = sandbox.get_accounts().pop().private_key,
-        client = sandbox.get_algod_client(),
-        unit_name = "USDT",
-        asset_name = "test_asset",
-        nft_url=None,
-    )
-    service.create_nft()
+# def demo():
+#     service = NFTService(
+#         nft_creator_address = sandbox.get_accounts().pop().address,
+#         nft_creator_pk = sandbox.get_accounts().pop().private_key,
+#         client = sandbox.get_algod_client(),
+#         unit_name = "USDT",
+#         asset_name = "test_asset",
+#         nft_url=None,
+#     )
+#     service.create_nft()
 
 import flask
 from flask import Flask, request, jsonify
@@ -383,6 +383,7 @@ app = Flask(__name__)
 def testpost():
     input_json = request.get_json(force=True)
 
+    from beaker import sandbox
     service = NFTService(
         nft_creator_address = sandbox.get_accounts().pop().address,
         nft_creator_pk = sandbox.get_accounts().pop().private_key,

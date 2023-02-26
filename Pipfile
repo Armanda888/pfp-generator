@@ -4,9 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pyteal = "==0.9.1"
-beaker = "==1.12.1"
-py-algorand-sdk = "==1.8.0"
+beaker-pyteal = "==0.5.4"
 mypy = "==0.910"
 pytest = "*"
 black = "==21.7b0"
