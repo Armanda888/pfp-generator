@@ -232,11 +232,11 @@ def clear_state_program():
     return Approve()
 
 
-if __name__ == "__main__":
-    with open("auction_approval.teal", "w") as f:
-        compiled = compileTeal(approval_program(), mode=Mode.Application, version=5)
-        f.write(compiled)
+# if __name__ == "__main__":
+#     with open("auction_approval.teal", "w") as f:
+#         compiled = compileTeal(approval_program(), mode=Mode.Application, version=5)
+#         f.write(compiled)
 
-    with open("auction_clear_state.teal", "w") as f:
-        compiled = compileTeal(clear_state_program(), mode=Mode.Application, version=5)
-        f.write(compiled)
+#     with open("auction_clear_state.teal", "w") as f:
+#         compiled = compileTeal(clear_state_program(), mode=Mode.Application, version=5)
+#         f.write(compiled)
